@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8F1A3A83-98AE-4332-B80E-9BC543A9BC1F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PigTail</RootNamespace>
+    <AssemblyName>PigTail</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FetchInfo.cs" />
+    <Compile Include="Load.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Load.Designer.cs">
+      <DependentUpon>Load.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entrance.cs" />
+    <Compile Include="InterMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterMode.Designer.cs">
+      <DependentUpon>InterMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AIMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AIMode.Designer.cs">
+      <DependentUpon>AIMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalMode.Designer.cs">
+      <DependentUpon>LocalMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternetMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternetMenu.Designer.cs">
+      <DependentUpon>InternetMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="Poker.cs" />
+    <Compile Include="Probablity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Worm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Worm.Designer.cs">
+      <DependentUpon>Worm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Load.resx">
+      <DependentUpon>Load.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterMode.resx">
+      <DependentUpon>InterMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AIMode.resx">
+      <DependentUpon>AIMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalMode.resx">
+      <DependentUpon>LocalMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternetMenu.resx">
+      <DependentUpon>InternetMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Worm.resx">
+      <DependentUpon>Worm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ai_mode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\int_mode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\local_mode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card_back.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pigtail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pigtail1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\方块A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\黑桃A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\红桃A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\梅花A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cmd.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\token.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\webhelper.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MachineCrisis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Humanity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DelegateMachine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
